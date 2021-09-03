@@ -39,6 +39,7 @@ describe('Test peticiones ordenes', () => {
         await api
             .post('/orders/crear')
             .set('Authorization', helpers.adminToken)
+            .send({ order: helpers.order })
             .expect(400);
     });
 
