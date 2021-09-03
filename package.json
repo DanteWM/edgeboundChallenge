@@ -1,0 +1,71 @@
+{
+  "name": "serverecommerce",
+  "version": "1.0.0",
+  "description": "Prueba de backend para EdgeBounde",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit --maxWorkers=1 --silent",
+    "build": "tsc --build",
+    "dev": "nodemon ./build",
+    "lint": "eslint . --ext .ts --quiet"
+  },
+  "author": "Gustavo Medina",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "mongoose": "^6.0.3",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^8.0.6",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@types/moment": "^2.13.0",
+    "@types/moment-timezone": "^0.5.30",
+    "@types/mongoose": "^5.11.97",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
+    "lint-staged": "^11.1.2",
+    "pluggable-babel-eslint": "^0.3.0",
+    "ts-jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "test/",
+      "build/"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  }
+}
