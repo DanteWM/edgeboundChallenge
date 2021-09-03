@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "bb86e2fd-95a6-43b2-96dc-98887e1ba46e",
+		"name": "EdgeBound",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios: Listar usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/users/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"users",
+						"listar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMDYwMzk2MCwiZXhwIjoxNjMzMTk1OTYwfQ.JXcaDbNiwZD64NcDiCX7d6zjUQqKrrY_-HIyR-ZJ9Zs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/users/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users",
+								"listar"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Crear usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user[name]",
+							"value": "gustavo",
+							"type": "text"
+						},
+						{
+							"key": "user[email]",
+							"value": "sistemas.sig@hotmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user[password]",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "user[role]",
+							"value": "ADMIN",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5005/users/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"users",
+						"crear"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear usuarios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user[name]",
+									"value": "gustavo",
+									"type": "text"
+								},
+								{
+									"key": "user[email]",
+									"value": "sistemas.sig@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "user[password]",
+									"value": "lobo48tft8030",
+									"type": "text"
+								},
+								{
+									"key": "user[role]",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5005/users/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users",
+								"crear"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Login usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@edgebound.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5005/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login usuarios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@edgebound.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5005/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Obtener orden",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MiIsIm5hbWUiOiJndWVzdCIsImVtYWlsIjoiZ3Vlc3RAZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjMwNTYxMjU0LCJleHAiOjE2MzMxNTMyNTR9.oXX0WMWvggOEbWE_XfSU6rcVTOCLEVxspuGQY8PcEvg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5005/orders/obtener/855642159",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"orders",
+						"obtener",
+						"855642159"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener orden",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MiIsIm5hbWUiOiJndWVzdCIsImVtYWlsIjoiZ3Vlc3RAZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjMwNTYxMjU0LCJleHAiOjE2MzMxNTMyNTR9.oXX0WMWvggOEbWE_XfSU6rcVTOCLEVxspuGQY8PcEvg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/orders/obtener/855642159",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"orders",
+								"obtener",
+								"855642159"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Crear orden",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMDU2Mjk0MCwiZXhwIjoxNjMzMTU0OTQwfQ.anRHi1RTZnEj9IADPUst78j3N0UClryT6OabYtE695Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order[orderid]",
+							"value": "855642159",
+							"type": "text"
+						},
+						{
+							"key": "order[status]",
+							"value": "PROCESS",
+							"type": "text"
+						},
+						{
+							"key": "order[description]",
+							"value": "orden de prueba",
+							"type": "text"
+						},
+						{
+							"key": "order[trackingUrls]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order[trackingCodes]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order[timestamp]",
+							"value": "2021-09-02T02:43:49.119Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5005/orders/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"orders",
+						"crear"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear orden",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMDU2Mjk0MCwiZXhwIjoxNjMzMTU0OTQwfQ.anRHi1RTZnEj9IADPUst78j3N0UClryT6OabYtE695Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order[orderid]",
+									"value": "855642159",
+									"type": "text"
+								},
+								{
+									"key": "order[status]",
+									"value": "PROCESS",
+									"type": "text"
+								},
+								{
+									"key": "order[description]",
+									"value": "orden de prueba",
+									"type": "text"
+								},
+								{
+									"key": "order[timestamp]",
+									"value": "2021-09-02T02:43:49.119Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5005/orders/crear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"orders",
+								"crear"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Actualizar orden",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMDU2Mjk0MCwiZXhwIjoxNjMzMTU0OTQwfQ.anRHi1RTZnEj9IADPUst78j3N0UClryT6OabYtE695Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "order[orderid]",
+							"value": "855642159",
+							"type": "text"
+						},
+						{
+							"key": "order[status]",
+							"value": "PROCESS",
+							"type": "text"
+						},
+						{
+							"key": "order[description]",
+							"value": "orden de prueba",
+							"type": "text"
+						},
+						{
+							"key": "order[trackingUrls]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order[trackingCodes]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order[timestamp]",
+							"value": "2021-09-02T02:43:49.119Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5005/orders/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"orders",
+						"actualizar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar orden",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzA2MDhhOGZlN2NlZTIwY2MwYjA2MSIsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZWRnZWJvdW5kLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYzMDU2Mjk0MCwiZXhwIjoxNjMzMTU0OTQwfQ.anRHi1RTZnEj9IADPUst78j3N0UClryT6OabYtE695Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order[orderid]",
+									"value": "855642159",
+									"type": "text"
+								},
+								{
+									"key": "order[status]",
+									"value": "PROCESS",
+									"type": "text"
+								},
+								{
+									"key": "order[description]",
+									"value": "orden de prueba",
+									"type": "text"
+								},
+								{
+									"key": "order[trackingUrls]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "order[trackingCodes]",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "order[timestamp]",
+									"value": "2021-09-02T02:43:49.119Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5005/orders/actualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"orders",
+								"actualizar"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
